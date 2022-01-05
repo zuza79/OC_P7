@@ -1,21 +1,24 @@
 //app.js
-const express = require('express');    
+const express = require ('express');    
 const bodyParser = require('body-parser');  
 const path = require('path');  
+//const sequelize = require ('mysql');
+//connexion automatique???
 
 //security - OWASP
 const helmet = require("helmet"); //anti add to header
 const dotenv = require ('dotenv');
 const resul = dotenv.config();
 
-/*//sequelize
-const { Sequelize } = require ('sequelize');
+//sequelize
+const db = require("./models");
+db.sequelize.sync();
+const Sequelize = require ('mysql');
 const sequelize = new Sequelize("groupomania", "groupomania", "Pra123ha*", {
     dialect: "mysql",
     host: "localhost"
-});*/
-
-/*try {
+});
+try {
     sequelize.authenticate();
     console.log('Connecté à la base de données MySQL!');
     sequelize.query("CREATE DATABASE `groupomania`;").then(([results, metadata]) => {
@@ -24,7 +27,7 @@ const sequelize = new Sequelize("groupomania", "groupomania", "Pra123ha*", {
   } catch (error) {
     console.error('Impossible de se connecter, erreur suivante :', error);
  
- }*/
+ }
 
 
 
@@ -49,6 +52,7 @@ app.use(helmet());
 
 //transform JSON 
 app.use(bodyParser.json()) 
+app.use(bodyParser.urlencoded({extended:true}));
 
 /*/path images
 app.use('/images', express.static(path.join(__dirname, 'images'))); */ 
