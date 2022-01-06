@@ -26,14 +26,11 @@ try {
       })
   } catch (error) {
     console.error('Impossible de se connecter, erreur suivante :', error);
- 
- }
+  }
 
+//import routes
+//const routesSauce = require('./routes/sauce');   
 
-
-/*/import routes
-const routesSauce = require('./routes/sauce');   
-*/
 
 
 // creating API

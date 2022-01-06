@@ -1,4 +1,5 @@
-var DataTypes = require("sequelize").DataTypes;
+//suprimemr
+let DataTypes = require("sequelize").DataTypes;
 
 function initModels(sequelize) {
 

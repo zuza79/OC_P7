@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.12.5",
+    "sequelize-cli": "^6.3.0"
+  },
+  "name": "oc_p7",
+  "description": "��#\u0000 \u0000O\u0000C\u0000_\u0000P\u00007\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuza79/OC_P7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zuza79/OC_P7/issues"
+  },
+  "homepage": "https://github.com/zuza79/OC_P7#readme"
+}
