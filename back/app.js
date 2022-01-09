@@ -12,22 +12,16 @@ const resul = dotenv.config();
 
 //sequelize
 const db = require("./models");
-db.sequelize.sync();
-const Sequelize = require ('mysql');
-const sequelize = new Sequelize("groupomania", "groupomania", "Pra123ha*", {
-    dialect: "mysql",
-    host: "localhost"
-});
-try {
-    sequelize.authenticate();
-    console.log('Connecté à la base de données MySQL!');
-    sequelize.query("CREATE DATABASE `groupomania`;").then(([results, metadata]) => {
-        console.log('Base de données créée !');
-      })
-  } catch (error) {
-    console.error('Impossible de se connecter, erreur suivante :', error);
-  }
+//db.sequelize.sync();
 
+const { sequelize } = require('./models')
+
+/*app.listen({ port: 5000 }, async () => {
+  console.log('Server up on http://localhost:5000')
+  await sequelize.authenticate()
+  console.log('Database Connected!')
+})
+*/
 //import routes
 //const routesSauce = require('./routes/sauce');   
 

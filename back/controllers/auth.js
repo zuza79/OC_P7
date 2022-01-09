@@ -1,5 +1,6 @@
 // controllers - auth.ctrl
-//controller - user singup, user save, login, logout
+//controller - user singup, user save, login
+
 //security, user, password and hash information
 
 // singup
@@ -14,15 +15,11 @@ const hash = require('hash.js');
 const passwordValidator = require('password-validator');
 
 
-//////////////singup administrator or user ///dans mysql isAdmin true...
-let status = "";
+//////////////singup 
+
 exports.signup = (req, res, next) => {
-    if(req.body.email === "zuzana@groupomania.com"){
-      status = "ADMIN"
-    }else {
-      status = "USER"
-    }
-    bcrypt.hash(req.body.password, 10)
+  console.log(req.body);
+     bcrypt.hash(req.body.password, 10)
     .then(hash => {
       const user = {
           firstname: req.body.firstname,

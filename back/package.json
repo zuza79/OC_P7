@@ -25,6 +25,7 @@
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.12.5"
+    
   },
   "devDependencies": {
     "sequelize-cli": "^6.3.0"
