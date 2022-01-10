@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "groupomania",
+    "username": "root",
     "password": "heslo",
     "database": "database_development",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "groupomania",
+    "username": "root",
     "password": "heslo",
     "database": "database_test",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "groupomania",
+    "username": "root",
     "password": "heslo",
     "database": "database_production",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }
